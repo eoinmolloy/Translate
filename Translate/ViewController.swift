@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var translatedText: UITextView!
     
     //var data = NSMutableData()
+    // cgctdg
     
     override func viewDidLoad() {
         super.viewDidLoad()
