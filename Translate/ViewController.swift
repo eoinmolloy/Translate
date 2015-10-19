@@ -29,8 +29,8 @@ class ViewController: UIViewController {
     @IBAction func translate(sender: AnyObject) {
         
         let str = textToTranslate.text
+        //go find a way to put in the values from the site to the langstr varible.
         let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        
         let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
         let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
