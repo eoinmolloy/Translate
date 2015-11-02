@@ -80,6 +80,22 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        var pickerLabel = view as! UILabel!
+        if view == nil {  //if no label there yet
+            pickerLabel = UILabel()
+            //color the label's background
+            let hue = CGFloat(row)/CGFloat(pickerData.count)
+            pickerLabel.backgroundColor = UIColor(hue: hue, saturation: 0.5, brightness: 0.6, alpha: 0.6)
+        }
+        let titleData = pickerData[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 26.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
+        pickerLabel!.attributedText = myTitle
+        pickerLabel!.textAlignment = .Center
+        return pickerLabel
+        
+    }
+    
     @IBAction func translate(sender: AnyObject) {
         
         let str = textToTranslate.text
