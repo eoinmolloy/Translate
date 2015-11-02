@@ -15,7 +15,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var translatedText: UITextView!
     
     var pickerData: [String] = [String]()
-    var languages: [String] = [String]()
+    //var languages: [String] = [String]()
+    
+    var languages = ["en|fr", "en|ga", "en|tr"]
+    var picked: String = "en|fr"
     
     
     
@@ -57,23 +60,38 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return pickerData.count
     }
     
-    // The data to return for the row and component (column) that's being passed in
+    //MARK: Delegates
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
         return pickerData[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        
+        picked = pickerData[row]
+        if(pickerData[row] == "French") {
+            picked = languages[0]
+        }
+        else if(pickerData[row] == "Gaelic") {
+            picked = languages[1]
+        }
+        else if(pickerData[row] == "Turkish") {
+            picked = languages[2]
+        }
     }
     
     @IBAction func translate(sender: AnyObject) {
         
         let str = textToTranslate.text
-        languages = ["en|fr", "en|ga", "en|tr"]
+       
         //en|fr french
         //en|ga irish
         //en|tr turkish
         //go find a way to put in the values from the site to the langstr varible.
         let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
-        let langStr = (languages[0]).stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let langStr = (picked).stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        
         
         let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
         
