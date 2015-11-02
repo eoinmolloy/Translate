@@ -43,7 +43,7 @@
                                     <action selector="translate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ShI-8q-FoT"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cEJ-Ak-Y4H">
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cEJ-Ak-Y4H">
                                 <rect key="frame" x="38" y="364" width="525" height="157"/>
                             </pickerView>
                         </subviews>
@@ -55,11 +55,13 @@
                             <constraint firstItem="LaV-KV-DTJ" firstAttribute="top" secondItem="dii-Vg-90N" secondAttribute="bottom" constant="31" id="LTD-OY-g8P"/>
                             <constraint firstAttribute="bottom" secondItem="Tk9-7M-DEK" secondAttribute="bottom" constant="20" symbolic="YES" id="P4Z-UM-mZY"/>
                             <constraint firstItem="dii-Vg-90N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="dYF-2W-FQ1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cEJ-Ak-Y4H" secondAttribute="trailing" constant="17" id="fHO-ZQ-Zyc"/>
                             <constraint firstItem="dii-Vg-90N" firstAttribute="trailing" secondItem="LaV-KV-DTJ" secondAttribute="trailing" id="l4y-8y-Mw1"/>
                             <constraint firstItem="LaV-KV-DTJ" firstAttribute="centerX" secondItem="Tk9-7M-DEK" secondAttribute="centerX" id="nxZ-oD-Bjx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="picker" destination="cEJ-Ak-Y4H" id="o8P-Va-VWu"/>
                         <outlet property="textToTranslate" destination="dii-Vg-90N" id="BZK-kq-3qG"/>
                         <outlet property="translatedText" destination="LaV-KV-DTJ" id="oKU-z2-hHl"/>
                     </connections>
