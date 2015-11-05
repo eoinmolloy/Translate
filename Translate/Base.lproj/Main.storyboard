@@ -44,10 +44,15 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cEJ-Ak-Y4H">
-                                <rect key="frame" x="38" y="364" width="525" height="157"/>
+                                <rect key="frame" x="38" y="341" width="525" height="157"/>
                             </pickerView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="slB-Ul-lR1">
+                                <rect key="frame" x="123" y="525" width="118" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="jHU-vg-1Ye"/>
+                                </connections>
+                            </slider>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LaV-KV-DTJ" firstAttribute="leading" secondItem="dii-Vg-90N" secondAttribute="leading" id="1I9-UQ-zeR"/>
                             <constraint firstItem="dii-Vg-90N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8IO-Lz-JKE"/>
@@ -61,6 +66,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colourPicker" destination="slB-Ul-lR1" id="Lpz-8U-YI7"/>
                         <outlet property="picker" destination="cEJ-Ak-Y4H" id="o8P-Va-VWu"/>
                         <outlet property="textToTranslate" destination="dii-Vg-90N" id="BZK-kq-3qG"/>
                         <outlet property="translatedText" destination="LaV-KV-DTJ" id="oKU-z2-hHl"/>

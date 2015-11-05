@@ -13,10 +13,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var textToTranslate: UITextView!
     @IBOutlet weak var translatedText: UITextView!
+    @IBOutlet weak var colourPicker: UISlider!
+    //@IBOutlet weak var indicator: UIActivityIndicatorView!
+    
     
     var pickerData: [String] = [String]()
     //var languages: [String] = [String]()
     
+    
+    // arrays that contain the values needed to translate the stringss
     var languages = ["en|fr", "en|ga", "en|tr"]
     var picked: String = "en|fr"
     
@@ -48,7 +53,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //attempt at extra feature, changing the background colour of the app with a slider
+    @IBAction func sliderValueChanged(sender: UISlider) {
+        
+       
+        let sliderValue = CGFloat(colourPicker.value)
+        view.backgroundColor = UIColor(hue: sliderValue, saturation: 0.5, brightness: 0.5, alpha: 0.5)
+        
+        
+    }
     
     // The number of columns of data
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -65,6 +78,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return pickerData[row]
     }
     
+    // this method retrieves the value of the UIPIcker and assigns it to picked, which then turns the string into one of the values which can be translatess
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         
@@ -117,7 +131,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         //var data = NSMutableData()var data = NSMutableData()
         
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .White)
         indicator.center = view.center
         view.addSubview(indicator)
         indicator.startAnimating()
