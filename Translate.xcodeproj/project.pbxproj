@@ -11,7 +11,6 @@
 		FFD2F9B91BD1101A00F54057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B81BD1101A00F54057 /* ViewController.swift */; };
 		FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BA1BD1101A00F54057 /* Main.storyboard */; };
 		FFD2F9BE1BD1101A00F54057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BD1BD1101A00F54057 /* Assets.xcassets */; };
-		FFD2F9C11BD1101A00F54057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BF1BD1101A00F54057 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +19,6 @@
 		FFD2F9B81BD1101A00F54057 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFD2F9BB1BD1101A00F54057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFD2F9BD1BD1101A00F54057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FFD2F9C01BD1101A00F54057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFD2F9C21BD1101A00F54057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +56,6 @@
 				FFD2F9B81BD1101A00F54057 /* ViewController.swift */,
 				FFD2F9BA1BD1101A00F54057 /* Main.storyboard */,
 				FFD2F9BD1BD1101A00F54057 /* Assets.xcassets */,
-				FFD2F9BF1BD1101A00F54057 /* LaunchScreen.storyboard */,
 				FFD2F9C21BD1101A00F54057 /* Info.plist */,
 			);
 			path = Translate;
@@ -121,7 +118,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFD2F9C11BD1101A00F54057 /* LaunchScreen.storyboard in Resources */,
 				FFD2F9BE1BD1101A00F54057 /* Assets.xcassets in Resources */,
 				FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */,
 			);
@@ -148,14 +144,6 @@
 				FFD2F9BB1BD1101A00F54057 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FFD2F9BF1BD1101A00F54057 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FFD2F9C01BD1101A00F54057 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -285,6 +273,7 @@
 				FFD2F9C71BD1101A00F54057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
